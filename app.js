@@ -6,3 +6,16 @@ function reverseString(str){
     return reverseStr;
 }
 
+function isPalindrome(str){
+    var reverse=reverseString(str);
+    if(str === reverse){
+        console.log("Is palindrome")
+    }
+    else{
+        console.log("Is not palindrome")
+    }
+  return reverse;
+
+}
+
+
