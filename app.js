@@ -83,3 +83,34 @@ function allDateFormats(date){
 }
 
 
+function checkDateFormatsOnPalindrome(date){
+var listOfpalindrome=allDateFormats(date);
+var flag=false;
+
+for(var i=0;i<listOfpalindrome.length;i++){
+    if(isPalindrome(listOfpalindrome[i])){
+        flag=true;
+        break;
+    }
+
+}
+return flag;
+
+}
+
+
+
+// function getNextPalindromeDate(date){
+//     var counter=0;
+//     var nextDate=getNextDate(date);
+
+//     while(1){
+//         counter++;
+//         var isPalindrome=checkDateFormatsOnPalindrome(nextDate);
+//         if(isPalindrome){
+//             break;
+//         }
+//         nextDate=getNextDate(nextDate);
+//     }
+//     return [counter,nextDate]
+// }
