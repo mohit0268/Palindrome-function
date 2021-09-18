@@ -98,19 +98,12 @@ return flag;
 
 }
 
+function isLeapYear(year){
+    if(year % 400 === 0 && year % 4 === 0){
+        return "It is a leap year."
+    }
+    else{
+        return "It is not a leap year."
+    }
 
-
-// function getNextPalindromeDate(date){
-//     var counter=0;
-//     var nextDate=getNextDate(date);
-
-//     while(1){
-//         counter++;
-//         var isPalindrome=checkDateFormatsOnPalindrome(nextDate);
-//         if(isPalindrome){
-//             break;
-//         }
-//         nextDate=getNextDate(nextDate);
-//     }
-//     return [counter,nextDate]
-// }
+}
