@@ -107,3 +107,42 @@ function isLeapYear(year){
     }
 
 }
+
+function getNextDate(date){
+    var day=parseInt(date.day)+1;
+    var day=day.toString();
+    var month=date.month;
+    var year=date.year;
+
+    var daysInMonths=[31,28,31,30,31,30,31,31,30,31,30,31];
+
+   if(month===2){
+       if(isLeapYear(year)){
+           if(day>29){
+               day=1;
+               month++;
+           }
+       }
+        else{
+            if(day>28){
+                day=1;
+                month++;
+            }
+    }
+}
+else{
+    if(day>daysInMonths[month-1]){
+        day=1;
+        month++;
+    }
+}
+if(month>12){
+    month=1;
+    year++;
+}
+    return{
+        day:day,
+        month:month,
+        year:year
+    }
+}
