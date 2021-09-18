@@ -66,11 +66,20 @@ function convertDateToString(date){
     dateStr.year=date.year.toString();
     return dateStr;
 }
-var date={
-    day:1,
-    month:2,
-    year:2020
-};
 
-console.log(convertDateToString(date))
+function allDateFormats(date){
+    var dateStr=convertDateToString(date);
+
+    var ddmmyyyy=dateStr.day + dateStr.month + dateStr.year;
+    var mmddyyyy=dateStr.month + dateStr.day + dateStr.year;
+    var yyyymmdd=dateStr.year + dateStr.month + dateStr.day;
+    var ddmmyy=dateStr.day + dateStr.month + (dateStr.year.slice(-2));
+    var mmddyy=dateStr.month + dateStr.day + (dateStr.year.slice(-2));
+    var yymmdd=(dateStr.year.slice(-2)) + dateStr.month + dateStr.day;
+
+    var formats=[ddmmyyyy,mmddyyyy,yyyymmdd,ddmmyy,mmddyy,yymmdd];
+
+    return formats;
+}
+
 
